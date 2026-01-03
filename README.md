@@ -10,6 +10,10 @@
 
 Display all available JupyterLab commands with their full reference IDs and arguments in a dedicated tab. A reference help page for developers working with JupyterLab commands.
 
+![Command Palette](.resources/screenshot-command.png)
+
+![Commands Reference Panel](.resources/screenshot-commands-reference.png)
+
 ## Features
 
 - **Command reference tab** - Opens a new tab listing all registered JupyterLab commands

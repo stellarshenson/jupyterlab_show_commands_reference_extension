@@ -3,3 +3,139 @@
 
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
+
+/* Main widget container */
+.jp-CommandsReferenceWidget {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Header with search and count */
+.jp-CommandsReferenceWidget-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--jp-layout-color1);
+  border-bottom: 1px solid var(--jp-border-color2);
+  flex-shrink: 0;
+}
+
+/* Search input */
+.jp-CommandsReferenceWidget-search {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--jp-border-color1);
+  border-radius: 4px;
+  background: var(--jp-layout-color0);
+  color: var(--jp-ui-font-color1);
+  font-size: var(--jp-ui-font-size1);
+  outline: none;
+}
+
+.jp-CommandsReferenceWidget-search:focus {
+  border-color: var(--jp-brand-color1);
+}
+
+.jp-CommandsReferenceWidget-search::placeholder {
+  color: var(--jp-ui-font-color3);
+}
+
+/* Command count */
+.jp-CommandsReferenceWidget-count {
+  color: var(--jp-ui-font-color2);
+  font-size: var(--jp-ui-font-size0);
+  white-space: nowrap;
+}
+
+/* Scrollable content area */
+.jp-CommandsReferenceWidget-content {
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+}
+
+/* Commands table */
+.jp-CommandsReferenceWidget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--jp-ui-font-size1);
+}
+
+/* Table header */
+.jp-CommandsReferenceWidget-table thead {
+  position: sticky;
+  top: 0;
+  background: var(--jp-layout-color2);
+  z-index: 1;
+}
+
+.jp-CommandsReferenceWidget-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--jp-ui-font-color1);
+  border-bottom: 2px solid var(--jp-border-color1);
+  white-space: nowrap;
+}
+
+/* Table cells */
+.jp-CommandsReferenceWidget-table td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--jp-border-color2);
+  color: var(--jp-ui-font-color1);
+  vertical-align: top;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Command ID column - monospace and selectable */
+.jp-CommandsReferenceWidget-commandId {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  color: var(--jp-brand-color1);
+  user-select: text;
+  white-space: nowrap;
+}
+
+/* Alternating row colors */
+.jp-CommandsReferenceWidget-table tbody tr:nth-child(even) {
+  background: var(--jp-layout-color1);
+}
+
+.jp-CommandsReferenceWidget-table tbody tr:nth-child(odd) {
+  background: var(--jp-layout-color0);
+}
+
+/* Row hover effect */
+.jp-CommandsReferenceWidget-table tbody tr:hover {
+  background: var(--jp-layout-color2);
+}
+
+/* Column widths */
+.jp-CommandsReferenceWidget-table th:nth-child(1),
+.jp-CommandsReferenceWidget-table td:nth-child(1) {
+  width: 30%;
+  min-width: 200px;
+}
+
+.jp-CommandsReferenceWidget-table th:nth-child(2),
+.jp-CommandsReferenceWidget-table td:nth-child(2) {
+  width: 20%;
+}
+
+.jp-CommandsReferenceWidget-table th:nth-child(3),
+.jp-CommandsReferenceWidget-table td:nth-child(3) {
+  width: 30%;
+}
+
+.jp-CommandsReferenceWidget-table th:nth-child(4),
+.jp-CommandsReferenceWidget-table td:nth-child(4) {
+  width: 20%;
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  color: var(--jp-ui-font-color2);
+}

@@ -1,7 +1,7 @@
 {
     "name": "jupyterlab_show_commands_reference_extension",
-    "version": "0.1.0",
-    "description": "Jupyterlab custom command that opens a new tab where there is a long list of currently available commands with their full reference ( i.e. iframe:open ) along with the list of arguments - as extracted in realtime from the available commands some way. Page is supposed to serve the purpose of being reference help page for those who want to use the commands",
+    "version": "1.0.3",
+    "description": "Display all available JupyterLab commands with their full reference IDs and arguments in a dedicated tab",
     "keywords": [
         "jupyter",
         "jupyterlab",
@@ -56,7 +56,8 @@
         "watch:labextension": "jupyter labextension watch ."
     },
     "dependencies": {
-        "@jupyterlab/application": "^4.0.0"
+        "@jupyterlab/application": "^4.0.0",
+        "@jupyterlab/apputils": "^4.0.0"
     },
     "devDependencies": {
         "@jupyterlab/builder": "^4.0.0",
