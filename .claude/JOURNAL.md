@@ -15,3 +15,6 @@ This journal tracks substantive work on documents, diagrams, and documentation c
 
 4. **Task - CI/CD and release preparation** (v1.0.3): Configure workflows, add screenshots, update version<br>
    **Result**: Updated GitHub Actions workflows per JUPYTERLAB_EXTENSION.md guidelines. Modified `check-release.yml` and `prep-release.yml` to add `steps_to_skip: "build-changelog"` and `RH_SINCE_LAST_STABLE: 'true'` environment variable - required for direct commit workflow without PRs. Updated `build.yml` to add `ignore_links` parameter for badge URLs in link checker. Added screenshots to README.md showing command palette search and commands reference panel. Updated version to 1.0.2 (Makefile auto-incremented to 1.0.3). Added `.resources/` directory with `screenshot-command.png` and `screenshot-commands-reference.png`.
+
+5. **Task - Initial release** (v1.0.4): Publish to npm and PyPI registries<br>
+   **Result**: Fixed `package.json` repository URLs required by jupyter-releaser - set `repository.url` to `https://github.com/stellarshenson/jupyterlab_show_commands_reference_extension.git`, `homepage` and `bugs.url` to correct GitHub URLs. Ran `make publish` which auto-incremented version from 1.0.3 to 1.0.4 and published packages to npm and PyPI. Applied lint and prettier formatting before release.
