@@ -36,7 +36,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
     // Register the command
     app.commands.addCommand(CommandIDs.open, {
       label: 'Show Commands Reference',
-      caption: 'Display all available JupyterLab commands with their IDs and arguments',
+      caption:
+        'Display all available JupyterLab commands with their IDs and arguments',
       execute: () => {
         // Create widget if it doesn't exist or was disposed
         if (!widget || widget.isDisposed) {

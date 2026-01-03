@@ -207,7 +207,9 @@ export class CommandsReferenceWidget extends Widget {
     }
 
     // Fallback: direct key-value format (non-schema)
-    const keys = Object.keys(schema).filter(k => k !== 'type' && k !== '$schema');
+    const keys = Object.keys(schema).filter(
+      k => k !== 'type' && k !== '$schema'
+    );
     if (keys.length === 0) {
       return '';
     }
@@ -223,7 +225,9 @@ export class CommandsReferenceWidget extends Widget {
     for (const row of rows) {
       const idCell = row.querySelector('td:first-child');
       if (idCell && idCell.textContent === commandId) {
-        const argsCell = row.querySelector('td:nth-child(4)') as HTMLElement | null;
+        const argsCell = row.querySelector(
+          'td:nth-child(4)'
+        ) as HTMLElement | null;
         if (argsCell) {
           argsCell.textContent = argsStr;
           argsCell.title = argsStr;
